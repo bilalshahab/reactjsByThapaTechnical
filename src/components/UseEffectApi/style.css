@@ -1,0 +1,79 @@
+body > #root > div {
+    height: 100vh;
+  }
+
+body {
+    background-color: #b3e5fc;
+    border-radius: 10px;
+    font-family: "Raleway", sans-serif;
+}
+html, body, #app, #app>div {
+    height: 100%
+  }
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+.textLeft {
+  text-align: left;
+}
+.loadingDiv {
+  height: 100vh;
+  /* display: grid; */
+  place-items: center;
+}
+.card {
+  width: 450px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: auto;
+}
+.image {
+  min-width: 155px;
+  margin-right: 20px;
+}
+.stats {
+  background: #f2f5f8 !important;
+  color: #000 !important;
+}
+.articles {
+  font-size: 14px;
+  color: #a1aab9;
+}
+.number1 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.followers {
+  font-size: 14px;
+  color: #a1aab9;
+}
+.number2 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.rating {
+  font-size: 14px;
+  color: #a1aab9;
+}
+.number3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+h4{
+    font-size: 24px;
+}
+.link{
+    font-size: 15px;
+}
+.loading-circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  /* margin: auto; */
+}
+.css-42igfv {
+  margin: auto;
+  margin-top: 25%;
+}

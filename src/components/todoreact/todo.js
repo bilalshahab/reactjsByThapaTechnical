@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Loading from '../UseEffectApi/loading';
 import "./style.css";
 
 // get the localStorage data back
@@ -11,13 +12,14 @@ const getLocalData = () => {
     return [];
   }
 };
-
+// debugger;
 const Todo = () => {
   const [inputdata, setInputData] = useState("");
   const [items, setItems] = useState(getLocalData());
   const [isEditItem, setIsEditItem] = useState("");
   const [toggleButton, setToggleButton] = useState(false);
-
+  const [loading, setLoading] = useState(true);
+  
   // add the items fucnction
   const addItem = () => {
     if (!inputdata) {
@@ -27,14 +29,18 @@ const Todo = () => {
         items.map((curElem) => {
           if (curElem.id === isEditItem) {
             return { ...curElem, name: inputdata };
+            
           }
           return curElem;
+          
         })
       );
-
+      
+      setLoading(true);
       setInputData("");
       setIsEditItem(null);
       setToggleButton(false);
+      
     } else {
       const myNewInputData = {
         id: new Date().getTime().toString(),
@@ -45,6 +51,7 @@ const Todo = () => {
     }
   };
 
+  
   //edit the items
   const editItem = (index) => {
     const item_todo_edited = items.find((curElem) => {
@@ -72,6 +79,12 @@ const Todo = () => {
   useEffect(() => {
     localStorage.setItem("mytodolist", JSON.stringify(items));
   }, [items]);
+
+  // setLoading(false);
+
+  // if(loading){
+  //   return <Loading />
+  // }
 
   return (
     <>

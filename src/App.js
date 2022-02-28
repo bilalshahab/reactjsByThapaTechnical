@@ -1,12 +1,38 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import Todo from "./components/todoreact/todo";
-// import Temp from "./components/weather/temp";
+import Temp from "./components/weather/temp";
+import Github from "./components/UseEffectApi/github";
+
+import Githubdetails from "./components/UseEffectApi/githubdetails";
+import Githubusersdetails from "./components/UseEffectApi/githubusersdetails";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-      <Todo />
-    </>
+    <div>
+     <Router>
+      <Routes> 
+        <Route path="/" element={<Github />} />
+      </Routes>
+
+      <Routes> 
+        <Route path="/githubusersdetails" element={<Githubusersdetails />} />
+      </Routes>
+    </Router>
+
+      {/* <Todo />  */}
+      {/* <Temp/> */}
+      {/* <Loading /> */}
+      {/* <Github/> */}
+      {/* <Githubusersdetails/> */}
+    </div>
+
+    
   );
 };
 

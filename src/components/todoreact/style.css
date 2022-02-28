@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
 
+  body > #root > div {
+    height: 10vh !important;
+  }
+
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +21,7 @@ html {
   background: #060822;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .child-div {
@@ -43,7 +48,7 @@ input {
   padding: 2rem 1.2rem;
   font-size: 1.8rem;
   line-height: 1.42857143;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   color: rgb(58, 57, 57);
   background-color: #fff;
   background-image: none;
@@ -71,6 +76,16 @@ input {
 input:focus {
   -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+::-webkit-input-placeholder { /* Edge */
+  color: red;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+::placeholder {
+  color: red;
 }
 
 /*  Please Subscribe to ThapaTechnical Youtube Channel
@@ -83,6 +98,8 @@ input:focus {
 }
 
 .fa {
+  padding: 5px;
+  margin-top: 10px;
   margin-left: -2.5rem;
   cursor: pointer;
   pointer-events: auto;
@@ -225,4 +242,8 @@ input:focus {
   letter-spacing: 0.05em;
   -webkit-transform: translateY(0) scale(1, 1);
   transform: translateY(0) scale(1, 1);
+}
+
+.form-control{
+  font-size: 20px !important;
 }

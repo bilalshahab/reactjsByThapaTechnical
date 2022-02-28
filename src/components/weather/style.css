@@ -146,8 +146,8 @@ body {
   width: 50%;
   /* border: 3px solid #00b4cc; */
   border: none;
-  padding: 16px;
-  height: 20px;
+  /* padding: 16px; */
+  height: 16px;
   border-radius: 5px 0 0 5px;
   outline: none;
   font-size: 18px;
@@ -159,7 +159,7 @@ body {
 
 .searchButton {
   width: 80px;
-  height: 32px;
+  height: 45px;
   border: none;
   background: #048b9c;
   text-align: center;
