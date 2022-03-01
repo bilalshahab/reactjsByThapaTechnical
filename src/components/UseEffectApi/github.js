@@ -1,8 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import Githubusers from './githubusers';
-import Githubusersdetails from './githubusersdetails';
 import Loading from './loading';
-import "./style.css";
+import './style.css';
 
 const Github = () => {
 
