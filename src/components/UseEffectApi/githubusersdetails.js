@@ -1,63 +1,41 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import Githubusersdetails from './githubusersdetails';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+debugger;
 
-const Githubusers = ({users}) => {
+const Githubusersdetails = ({usersdetails}) => {
     return (
-        
         <div>
              <div className="container-fluid mt-5">
                 <div className="row text-center">
-                <h1>Github Users API</h1>
-                    {
-                        users.map((curElem) => {
-                            const { id, login, avatar_url, html_url, followers, public_repos, following } = curElem;
-                            {/* console.log(users);*/}
-                            {/* users.length = 10; */}
-                            {/* console.log(id); */}
-                            return(
-                                 /* <Link to='https://api.github.com/orgs/ORG/projects'>  */
-                                /* < href="https://api.github.com/orgs/ORG/repos"> */
+                <h1>Github Users Details</h1>
+               
+                   
+                        <div className="col-10 col-md-6 mt-5 mx-auto" key={usersdetails.id}>
                                 
-                                <div className="col-10 col-md-4 mt-5" key={id}>
-                                 
-                                    <div className="card p-2">
-                                        <div className="d-flex align-items-center">
-                                            <div className="image"><img src={avatar_url} className="rounded" width="155" /></div>
-                                                <div className="ml-2 w-100">
-                                                
-                                                    <h4 className="mb-0 mt-2 textLeft">{login} </h4>
-                                                    <h6 className="textLeft link"><a href={html_url}>{curElem.url}</a></h6>
-                                                    <h6 className='textleft link'><a href="/githubusersdetails">{curElem.url}</a></h6>
+                            <div className="card p-2">
+                                <div className="d-flex align-items-center">
+                                    <div className="image"><img src={usersdetails.avatar_url} alt="" className="rounded" width="155" /></div>
+                                        <div className="ml-2 w-100">
 
-                                                    <div className='user-details'>
-                                                    <div className="pt-2 mt-2 bg-primart d-flex justify-content-betwween rounded text-white stats">
-                                                        <div className="d-flex flex-column flex-fill"><span className="articles">Following </span> <span className="number1">{following}</span></div>
-                                                        <div className="d-flex flex-column flex-fill"><span className="followers">Followers </span> <span className="number2">{followers}</span></div>
-                                                        <div className="d-flex flex-column flex-fill"><span className="rating">Public Repos </span> <span className="number3">{ public_repos}</span></div>
-                                                    </div>
-                                                </div>
-
-                                                </div>
-                                                
-                                                
+                                            <h4 className="mb-0 mt-0 textLeft">{usersdetails.login} </h4>
+                                            <a href={usersdetails.html_url}><span className="textLeft link">{usersdetails.html_url}</span></a>
+                                            <div className="pt-2 mt-2 bg-primart d-flex justify-content-betwween rounded text-white stats">
+                                                <div className="d-flex flex-column flex-fill"><span className="articles">Public Repos </span> <span className="number1">{usersdetails.public_repos}</span></div>
+                                                <div className="d-flex flex-column flex-fill"><span className="followers">Followers </span> <span className="number2">{usersdetails.followers}</span></div>
+                                                <div className="d-flex flex-column flex-fill"><span className="rating">Location </span> <span className="number3">{usersdetails.location}</span></div>
+                                            </div>
 
                                         </div>
-                                    </div>
-  
+
                                 </div>
-                                /* </a> */
-                                 /* </Link>  */
-                            )
-                        })
-                    }
+                            </div>
+                    </div>
+
+                    
                     
                 </div>
             </div>
         </div>
-        
     )
 }
 
-export default Githubusers
+export default Githubusersdetails
